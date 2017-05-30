@@ -10,9 +10,9 @@ class BlogList extends React.Component {
     return (
       <ul>
         {
-          posts.map((post, i) => {
+          posts.map((post) => {
             return (
-              <li key={i}>
+              <li key={post.id}>
                 <BlogItem  post={post} />
               </li>
             );

@@ -3,6 +3,7 @@ import React from 'react';
 import BlogList from '../ui/BlogList';
 
 const post1 = {
+    id: 1,
     image: {
       src: "url1",
       alt: "alt1",
@@ -12,6 +13,7 @@ const post1 = {
   }
 
 const post2 = {
+    id: 2,
     image: {
       src: "url2",
       alt: "alt2",
@@ -21,6 +23,7 @@ const post2 = {
   }
 
 const post3 = {
+    id: 3,
     image: {
       src: "url3",
       alt: "alt3",
