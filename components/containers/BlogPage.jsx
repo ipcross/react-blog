@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 import BlogList from '../ui/BlogList';
 
@@ -9,7 +10,13 @@ const post1 = {
       alt: "alt1",
       style: {width: 100, height: 100}
     },
-    text: 'Text1'
+    text: 'Text1',
+    details: {
+      author: "Author1",
+      created_at: moment("20170520", "YYYYMMDD").fromNow(),
+      updated_at: moment().startOf('day').fromNow(),
+      likes: 1
+    }
   }
 
 const post2 = {
@@ -19,7 +26,13 @@ const post2 = {
       alt: "alt2",
       style: {width: 100, height: 100}
     },
-    text: 'Text2'
+    text: 'Text2',
+    details: {
+      author: "Author2",
+      created_at: moment("20170521", "YYYYMMDD").fromNow(),
+      updated_at: moment().startOf('day').fromNow(),
+      likes: 2
+    }
   }
 
 const post3 = {
@@ -29,7 +42,13 @@ const post3 = {
       alt: "alt3",
       style: {width: 100, height: 100}
     },
-    text: 'Text3'
+    text: 'Text3',
+    details: {
+      author: "Author3",
+      created_at: moment("20170601", "YYYYMMDD").fromNow(),
+      updated_at: moment().startOf('day').fromNow(),
+      likes: 3
+    }
   }
 
 const posts = [ post1, post2, post3];
