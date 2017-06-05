@@ -13,8 +13,8 @@ const post1 = {
     text: 'Text1',
     details: {
       author: "Author1",
-      created_at: moment("20170520", "YYYYMMDD").fromNow(),
-      updated_at: moment().startOf('day').fromNow(),
+      createdAt: moment("20170520", "YYYYMMDD").fromNow(),
+      updatedAt: moment().startOf('day').fromNow(),
       likes: 1
     }
   }
@@ -29,8 +29,7 @@ const post2 = {
     text: 'Text2',
     details: {
       author: "Author2",
-      created_at: moment("20170521", "YYYYMMDD").fromNow(),
-      updated_at: moment().startOf('day').fromNow(),
+      updatedAt: moment().startOf('day').fromNow(),
       likes: 2
     }
   }
@@ -45,8 +44,7 @@ const post3 = {
     text: 'Text3',
     details: {
       author: "Author3",
-      created_at: moment("20170601", "YYYYMMDD").fromNow(),
-      updated_at: moment().startOf('day').fromNow(),
+      createdAt: moment("20170601", "YYYYMMDD").fromNow(),
       likes: 3
     }
   }

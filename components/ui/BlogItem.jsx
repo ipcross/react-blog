@@ -8,9 +8,9 @@ import Likes from './Likes';
 
 const BlogItem = (props) => (
   <div>
-      <Image image={props.post.image} />
+      <Image {...props.post.image} />
       <TextBox>{props.post.text}</TextBox>
-      <PostDetails details={props.post.details} />
+      <PostDetails {...props.post.details} />
       <Likes likes={props.post.details.likes} />
   </div>
 )
@@ -21,8 +21,7 @@ BlogItem.propTypes = {
     text: PropTypes.string,
     image: Image.propTypes.image,
     details: PostDetails.propTypes.details
-  }),
-  incrementLikes: PropTypes.func
+  })
 };
 
 export default BlogItem;
