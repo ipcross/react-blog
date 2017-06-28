@@ -6,14 +6,14 @@ class BlogList extends React.Component {
     super(props);
   }
   render() {
-    const { posts }  = this.props
+    const { posts, like }  = this.props
     return (
       <ul>
         {
           posts.map((post) => {
             return (
               <li key={post.id}>
-                <BlogItem  post={post} />
+                <BlogItem  post={post} like={like} />
               </li>
             );
           })

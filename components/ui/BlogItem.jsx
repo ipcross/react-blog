@@ -11,7 +11,7 @@ const BlogItem = (props) => (
       <Image {...props.post.image} />
       <TextBox>{props.post.text}</TextBox>
       <PostDetails {...props.post.details} />
-      <Likes likes={props.post.details.likes} />
+      <Likes like={props.like} likes={props.post.likes} id={props.post.id}/>
   </div>
 )
 
@@ -21,7 +21,9 @@ BlogItem.propTypes = {
     text: PropTypes.string,
     image: Image.propTypes.image,
     details: PostDetails.propTypes.details
-  })
+  }),
+  like: PropTypes.func.isRequired,
+  likes: PropTypes.number
 };
 
 export default BlogItem;

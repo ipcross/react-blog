@@ -1,35 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Likes extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      likes: this.props.likes || 0
-    }
-    this.incrementLikes = this.incrementLikes.bind(this)
-  }
-
-  incrementLikes() {
-    this.setState({ likes: this.state.likes + 1 })
-  }
-
-  render() {
-    return (
-      <div>
-        {this.state.likes}
-        <button onClick={this.incrementLikes} >+</button>
-      </div>
-    );
-  }
-}
+const Likes = ({likes, like, id}) => (
+  <button onClick={(e) => like(id)}>Likes: {likes}</button>
+);
 
 Likes.defaultProps = {
   likes: 0
 }
 
 Likes.propTypes = {
-  likes: PropTypes.number.isRequired
+  likes: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+  like: PropTypes.func.isRequired
 }
 
 export default Likes;
