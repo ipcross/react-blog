@@ -8,12 +8,12 @@ import Likes from './Likes';
 
 const BlogItem = (props) => (
   <div>
-      <Image {...props.post.image} />
-      <TextBox>{props.post.text}</TextBox>
-      <PostDetails {...props.post.details} />
-      <Likes like={props.like} likes={props.post.likes} id={props.post.id}/>
+    <Image {...props.post.image} />
+    <TextBox>{props.post.text}</TextBox>
+    <PostDetails {...props.post.details} />
+    <Likes like={props.like} likes={props.post.likes} id={props.post.id}/>
   </div>
-)
+);
 
 BlogItem.propTypes = {
   post: PropTypes.shape({

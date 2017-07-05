@@ -9,6 +9,6 @@ TextBox.defaultProps = {
 
 TextBox.propTypes = {
   children: PropTypes.string.isRequired
-}
+};
 
 export default TextBox;

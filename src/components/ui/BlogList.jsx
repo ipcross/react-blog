@@ -2,11 +2,11 @@ import React from 'react';
 import BlogItem from '../ui/BlogItem';
 
 class BlogList extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
   }
   render() {
-    const { posts, like }  = this.props
+    const { posts, like }  = this.props;
     return (
       <ul>
         {
@@ -20,6 +20,6 @@ class BlogList extends React.Component {
         }
       </ul>
     );
-  };
+  }
 }
 export default BlogList;

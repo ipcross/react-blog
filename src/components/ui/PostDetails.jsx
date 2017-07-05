@@ -17,6 +17,6 @@ PostDetails.propTypes = {
   author: PropTypes.string.isRequired,
   createdAt: PropTypes.string,
   updatedAt: PropTypes.string
-}
+};
 
 export default PostDetails;

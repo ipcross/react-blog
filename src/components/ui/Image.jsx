@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 const Image = ({src,style,alt}) => (
   <div>
     <img
-       src={src}
-       style={style}
-       alt={alt} />
+      src={src}
+      style={style}
+      alt={alt} />
   </div>
-)
+);
 
 Image.defaultProps = {
   src: 'Default image',
