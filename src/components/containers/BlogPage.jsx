@@ -1,13 +1,13 @@
 import React from 'react';
 import update from 'immutability-helper';
 
-import BlogList from '../ui/BlogList';
-import PieChart from '../ui/PieChart';
+import BlogList from 'components/ui/BlogList';
+import PieChart from 'components/ui/PieChart';
 
 import { posts } from 'constants/static/items';
 
 export default class BlogPage extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {posts};
     this.like = this.like.bind(this);
@@ -15,16 +15,16 @@ export default class BlogPage extends React.Component {
 
   render() {
     const {posts} = this.state;
-    return(
+    return (
       <div>
         <BlogList posts={ this.state.posts } like={this.like} />
-        <PieChart columns={[ ...posts.map( post => [post.text,post.likes]) ]} />
+        <PieChart columns={[...posts.map(post => [post.text,post.likes])]} />
       </div>
     );
   }
 
   like(postId) {
-    const idx = this.state.posts.findIndex((elem) => elem.id === postId );
+    const idx = this.state.posts.findIndex((elem) => elem.id === postId);
     const newState = update(this.state, {
       posts: {
         [idx]: {

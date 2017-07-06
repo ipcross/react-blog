@@ -13,7 +13,7 @@ export const posts = [
     details: {
       author: 'Author1',
       createdAt: moment('20170520', 'YYYYMMDD').fromNow(),
-      updatedAt: moment().startOf('day').fromNow()
+      updatedAt: moment().startOf('day').fromNow
     }
   },
   {
@@ -27,7 +27,7 @@ export const posts = [
     },
     details: {
       author: 'Author2',
-      updatedAt: moment().startOf('day').fromNow()
+      updatedAt: moment().startOf('day').fromNow
     }
   },
   {

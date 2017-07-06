@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import c3 from 'c3';
 import PropTypes from 'prop-types';
 
 class PieChart extends React.Component {

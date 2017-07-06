@@ -1,12 +1,13 @@
 import React from 'react';
-import BlogItem from '../ui/BlogItem';
+import PropTypes from 'prop-types';
+import BlogItem from 'components/ui/BlogItem';
 
 class BlogList extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    const { posts, like }  = this.props;
+    const { posts, like } = this.props;
     return (
       <ul>
         {
@@ -22,4 +23,10 @@ class BlogList extends React.Component {
     );
   }
 }
+
+BlogList.propTypes = {
+  posts: PropTypes.array,
+  like: PropTypes.func
+};
+
 export default BlogList;

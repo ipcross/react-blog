@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Image from './Image';
-import TextBox from './TextBox';
-import PostDetails from './PostDetails';
-import Likes from './Likes';
+import Image from 'components/ui/Image';
+import TextBox from 'components/ui/TextBox';
+import PostDetails from 'components/ui/PostDetails';
+import Likes from 'components/ui/Likes';
 
 const BlogItem = (props) => (
   <div>
@@ -20,10 +20,10 @@ BlogItem.propTypes = {
     id: PropTypes.number,
     text: PropTypes.string,
     image: Image.propTypes.image,
-    details: PostDetails.propTypes.details
+    details: PostDetails.propTypes.details,
+    likes: PropTypes.number
   }),
-  like: PropTypes.func.isRequired,
-  likes: PropTypes.number
+  like: PropTypes.func.isRequired
 };
 
 export default BlogItem;

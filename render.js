@@ -7,4 +7,4 @@ const result = ReactDOMServer.renderToString(
   React.createElement(BlogPage)
 );
 
-console.log(result)
+console.log(result);
