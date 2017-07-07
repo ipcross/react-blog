@@ -22,6 +22,7 @@ module.exports = {
   },
   "plugins": [
     "react",
+    "import",
     "destructuring"
   ],
   "rules": {
@@ -76,6 +77,7 @@ module.exports = {
     "react/jsx-uses-react": 2
   },
   "settings": {
+    "import/extensions": [".js'", ".jsx"],
     "import/resolver": {
       "node": {
         "moduleDirectory": [

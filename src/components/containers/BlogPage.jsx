@@ -1,8 +1,8 @@
 import React from 'react';
 import update from 'immutability-helper';
 
-import BlogList from 'components/ui/BlogList';
-import PieChart from 'components/ui/PieChart';
+import BlogList from 'components/ui/BlogList.jsx';
+import PieChart from 'components/ui/PieChart.jsx';
 
 import { posts } from 'constants/static/items';
 

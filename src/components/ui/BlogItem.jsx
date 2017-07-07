@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Image from 'components/ui/Image';
-import TextBox from 'components/ui/TextBox';
-import PostDetails from 'components/ui/PostDetails';
-import Likes from 'components/ui/Likes';
+import Image from 'components/ui/Image.jsx';
+import TextBox from 'components/ui/TextBox.jsx';
+import PostDetails from 'components/ui/PostDetails.jsx';
+import Likes from 'components/ui/Likes.jsx';
 
 const BlogItem = (props) => (
   <div>
