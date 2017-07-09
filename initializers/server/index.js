@@ -3,7 +3,7 @@ const webpackDevServer = require('webpack-dev-server');
 
 const config = require('../../webpack.config.js');
 
-const host = 'localhost';
+const host = '192.168.23.148';
 const port = 3000;
 
 new webpackDevServer(webpack(config), {
