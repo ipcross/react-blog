@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'components/elements/Link';
+import { postsPath } from 'helpers/routes';
 
 import Image from 'components/ui/Image.jsx';
-import TextBox from 'components/ui/TextBox.jsx';
 import PostDetails from 'components/ui/PostDetails.jsx';
 import Likes from 'components/ui/Likes.jsx';
 
 const BlogItem = (props) => (
   <div>
     <Image {...props.post.image} />
-    <TextBox>{props.post.text}</TextBox>
+    <Link to={postsPath(props.post.id)}>{props.post.text}</Link>
     <PostDetails {...props.post.details} />
     <Likes like={props.like} likes={props.post.likes} id={props.post.id}/>
   </div>
