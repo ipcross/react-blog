@@ -5,25 +5,11 @@ import { Grid } from 'semantic-ui-react';
 import BlogList from 'components/ui/BlogList.jsx';
 import PieChart from 'components/ui/PieChart.jsx';
 
-import request from 'superagent';
-
 export default class BlogPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {posts: []};
+    this.state = this.props.posts;
     this.like = this.like.bind(this);
-  }
-
-  componentDidMount() {
-    this.fetchPosts();
-  }
-
-  fetchPosts() {
-    request.get(
-      'http://192.168.23.148:3001/',
-      {},
-      (err, res) => this.setState({ posts: res.body })
-    );
   }
 
   render() {
