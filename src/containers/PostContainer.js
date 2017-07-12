@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import BlogItem from 'components/ui/BlogItem.jsx';
+import Post from 'components/Post.jsx';
 
 const stateToProps = (state) => ({
   post: state.post.entry,
@@ -8,4 +8,4 @@ const stateToProps = (state) => ({
   error: state.post.error
 });
 
-export default connect(stateToProps)(BlogItem);
+export default connect(stateToProps)(Post);

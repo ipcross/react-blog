@@ -5,14 +5,14 @@ import { postsPath } from 'helpers/routes';
 
 import Image from 'components/ui/Image.jsx';
 import PostDetails from 'components/ui/PostDetails.jsx';
-import Likes from 'components/ui/Likes.jsx';
+import LikeContainer from 'containers/LikeContainer';
 
 const BlogItem = (props) => (
   <div>
     <Image {...props.post.image} />
     <Link to={postsPath(props.post.id)}>{props.post.text}</Link>
     <PostDetails {...props.post.details} />
-    <Likes like={props.like} likes={props.post.likes} id={props.post.id}/>
+    <LikeContainer post={props.post} />
   </div>
 );
 
@@ -23,8 +23,7 @@ BlogItem.propTypes = {
     image: Image.propTypes.image,
     details: PostDetails.propTypes.details,
     likes: PropTypes.number
-  }),
-  like: PropTypes.func.isRequired
+  })
 };
 
 export default BlogItem;

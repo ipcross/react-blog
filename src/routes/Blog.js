@@ -7,7 +7,7 @@ import { fetchPost } from 'actions/Post';
 
 import PostsContainer from 'containers/PostsContainer';
 import PostContainer from 'containers/PostContainer';
-import About from 'containers/About.jsx';
+import About from 'components/About.jsx';
 
 const Index = {
   path: '/',

@@ -17,6 +17,13 @@ const receivePost = (response) => ({
   response
 });
 
+export const likePost = (post) => (
+  {
+    post,
+    type: types.LIKE_POST
+  }
+);
+
 export function fetchPost(id) {
   return (dispatch) => {
     dispatch(requestPost(id));
