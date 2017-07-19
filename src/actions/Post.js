@@ -20,7 +20,7 @@ const receivePost = (response) => ({
 export const likePost = (post) => (
   {
     post,
-    type: types.LIKE_POST
+    type: types.POST_LIKE
   }
 );
 

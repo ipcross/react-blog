@@ -16,6 +16,13 @@ const errorPosts = () => ({
   type: types.FETCH_POSTS_ERROR
 });
 
+export const likePost = (postId) => (
+  {
+    postId,
+    type: types.POSTS_LIKE
+  }
+);
+
 export function fetchPosts() {
   return (dispatch) => {
     dispatch(requestPosts());

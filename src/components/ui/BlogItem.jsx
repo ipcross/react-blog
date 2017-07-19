@@ -12,7 +12,7 @@ const BlogItem = (props) => (
     <Image {...props.post.image} />
     <Link to={postsPath(props.post.id)}>{props.post.text}</Link>
     <PostDetails {...props.post.details} />
-    <LikeContainer post={props.post} />
+    <LikeContainer postId={props.post.id} />
   </div>
 );
 
