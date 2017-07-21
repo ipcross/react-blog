@@ -1,18 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Likes = ({likes, like, id}) => (
-  <button onClick={() => like(id)}>Likes: {likes}</button>
+const Likes = ({postId, count, likePost}) => (
+  <button onClick={() => likePost(postId)}>Likes: {count}</button>
 );
 
-Likes.defaultProps = {
-  likes: 0
-};
-
 Likes.propTypes = {
-  likes: PropTypes.number.isRequired,
-  id: PropTypes.number.isRequired,
-  like: PropTypes.func.isRequired
+  postId: PropTypes.number,
+  count: PropTypes.number,
+  likePost: PropTypes.fun
 };
 
 export default Likes;
