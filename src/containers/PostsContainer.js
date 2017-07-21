@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import BlogPage from 'components/BlogPage.jsx';
+import BlogPage from 'components/BlogPage';
 
 const stateToProps = (state) => ({
   posts: state.posts.entries,

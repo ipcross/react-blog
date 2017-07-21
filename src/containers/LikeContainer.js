@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { likePost } from 'actions/Posts';
 import { get, find } from 'lodash';
 
-import Likes from 'components/ui/Likes.jsx';
+import Likes from 'components/ui/Likes';
 
 const actionToProps = (dispatch, ownProps) => ({
   likePost: () => dispatch(likePost(ownProps.postId))

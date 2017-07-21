@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import { Segment, Container } from 'semantic-ui-react';
-import NavBar from 'components/ui/NavBar.jsx';
+import NavBar from 'components/ui/NavBar';
 
 const Footer = () => (
   <Segment>

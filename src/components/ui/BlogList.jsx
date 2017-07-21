@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BlogItem from 'components/ui/BlogItem.jsx';
+import BlogItem from 'components/ui/BlogItem';
 
 const BlogList = function ({ posts }) {
   return (
