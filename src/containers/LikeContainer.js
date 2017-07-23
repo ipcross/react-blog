@@ -5,7 +5,7 @@ import { get, find } from 'lodash';
 import Likes from 'components/ui/Likes';
 
 const actionToProps = (dispatch, ownProps) => ({
-  likePost: () => dispatch(likePost(ownProps.postId))
+  likeClick: () => dispatch(likePost(ownProps.postId))
 });
 
 const stateToProps = (state, ownProps) => ({

@@ -17,7 +17,7 @@ export default function(state = initialState, action) {
     case types.FETCH_POST_SUCCESS:
       return assign({}, initialState, { entry: action.response });
     case types.POST_LIKE:
-      return assign({}, state, { entry: incrementLikes(action.post) });
+      return assign({}, state, { entry: incrementLikes(state.post.entry) });
     default:
       return state;
   }
