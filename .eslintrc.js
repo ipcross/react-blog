@@ -77,9 +77,9 @@ module.exports = {
     "react/jsx-uses-react": 2
   },
   "settings": {
-    "import/extensions": [".js'", ".jsx"],
     "import/resolver": {
       "node": {
+        'extensions': ['.js', '.jsx'],
         "moduleDirectory": [
           "node_modules",
           "src"

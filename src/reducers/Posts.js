@@ -18,19 +18,18 @@ export default function(state = initialState, action) {
     case types.FETCH_POSTS_SUCCESS:
       return assign({}, initialState, { entries: action.response });
     case types.POSTS_LIKE:
-      return assign({}, state, { entries: incrementLikes(state.entries,action.postId) });
+      return assign({}, state,
+        {
+          entries: map(state.entries, (post) => {
+            if (post.id == action.postId) {
+              return assign({}, post, {
+                likes: post.likes + 1
+              });
+            }
+            return post;
+          })
+        });
     default:
       return state;
   }
 }
-
-const incrementLikes = (entries, postId) => {
-  map(entries,(post) => {
-    if (post.id == postId) {
-      return assign({}, post, {
-        likes: post.likes + 1
-      });
-    }
-    return post;
-  });
-};

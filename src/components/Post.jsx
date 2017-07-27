@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Item } from 'semantic-ui-react';
-import BlogItem from 'components/ui/BlogItem.jsx';
+import BlogItem from 'components/ui/BlogItem';
 
 const Post = (props) => (
   <Item.Group>

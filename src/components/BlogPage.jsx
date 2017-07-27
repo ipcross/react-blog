@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Loader } from 'semantic-ui-react';
 
-import BlogList from 'components/ui/BlogList.jsx';
-import PieChart from 'components/ui/PieChart.jsx';
+import BlogList from 'components/ui/BlogList';
+import PieChart from 'components/ui/PieChart';
 
 const BlogPage = (props) => (
   <Grid>
