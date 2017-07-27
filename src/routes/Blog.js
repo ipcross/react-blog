@@ -9,6 +9,7 @@ import { fetchPost } from 'actions/Post';
 import PostsContainer from 'containers/PostsContainer';
 import PostContainer from 'containers/PostContainer';
 import About from 'components/About';
+import Contacts from 'components/Contacts';
 
 const Index = {
   path: '/',
@@ -33,11 +34,17 @@ const AboutRoute = {
   component: About
 };
 
+const ContactsRoute = {
+  path: '/contacts',
+  component: Contacts
+};
+
 export default {
   component: MainLayout,
   childRoutes: [
     Index,
     PostRoute,
-    AboutRoute
+    AboutRoute,
+    ContactsRoute
   ]
 };
