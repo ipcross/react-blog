@@ -12,11 +12,12 @@ const host = '192.168.23.148';
 const port = 3000;
 
 const express = require('express');
+const morgan = require('morgan');
 
 const application = express();
 
+application.use(morgan('combined'));
 application.use(express.static('src/static'));
-
 application.set('views', __dirname);
 application.set('view engine', 'ejs');
 
