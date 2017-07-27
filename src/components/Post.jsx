@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Item } from 'semantic-ui-react';
+import { Item, Loader } from 'semantic-ui-react';
 import BlogItem from 'components/ui/BlogItem';
 import Helmet from 'react-helmet';
 
