@@ -7,8 +7,7 @@ const Likes = ({postId, count, likeClick}) => (
 
 Likes.propTypes = {
   postId: PropTypes.number,
-  count: PropTypes.number,
-  likeClick: PropTypes.fun
+  count: PropTypes.number
 };
 
 export default Likes;
