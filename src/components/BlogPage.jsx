@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Loader } from 'semantic-ui-react';
+import { map } from 'lodash/collection';
 
 import Helmet from 'react-helmet';
 
@@ -21,7 +22,7 @@ const BlogPage = (props) => (
           }
         </Grid.Column>
         <Grid.Column width={5}>
-          <PieChart columns={[...props.posts.map(post => [post.text,post.likes])]} />
+          <PieChart columns={ map(props.posts, post => [ `${post.title}_${post.id}` ,post.meta.likes ]) } />
         </Grid.Column>
       </Grid.Row>
     </Grid>

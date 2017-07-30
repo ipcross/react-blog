@@ -9,7 +9,7 @@ const actionToProps = (dispatch, ownProps) => ({
 });
 
 const stateToProps = (state, ownProps) => ({
-  count: get(find(state.posts.entries, { id: ownProps.postId }), 'likes', 0)
+  count: get(find(state.posts.entries.posts, { id: ownProps.postId }), 'meta.likes', 0)
 });
 
 export default connect(stateToProps, actionToProps)(Likes);

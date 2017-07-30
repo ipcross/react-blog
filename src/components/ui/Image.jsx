@@ -13,7 +13,7 @@ const Image = ({src,style,alt}) => (
 Image.defaultProps = {
   src: 'Default image',
   alt: 'Not Image',
-  style: {width: 100, height: 100}
+  style: {width: 150, height: 100, marginRight: 10, float: 'left'}
 };
 
 Image.propTypes = {
