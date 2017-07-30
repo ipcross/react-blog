@@ -1,13 +1,14 @@
 import MainLayout from 'layouts/MainLayout';
 
 import initialLoad from 'helpers/initialLoad';
-import { postsPath } from 'helpers/routes';
+import { postsPath, editPostPath } from 'helpers/routes';
 
 import { fetchPosts } from 'actions/Posts';
 import { fetchPost } from 'actions/Post';
 
 import PostsContainer from 'containers/PostsContainer';
 import PostContainer from 'containers/PostContainer';
+import EditPost from 'components/EditPost';
 import About from 'components/About';
 import Contacts from 'components/Contacts';
 
@@ -29,6 +30,15 @@ const PostRoute = {
   }
 };
 
+const EditPostRoute = {
+  path: editPostPath(),
+  component: EditPost,
+  prepareData: (store, query, params) => {
+    if (initialLoad()) return;
+    return store.dispatch(fetchPost(params.id));
+  }
+};
+
 const AboutRoute = {
   path: '/about',
   component: About
@@ -44,6 +54,7 @@ export default {
   childRoutes: [
     Index,
     PostRoute,
+    EditPostRoute,
     AboutRoute,
     ContactsRoute
   ]
