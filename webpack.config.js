@@ -5,6 +5,8 @@ import webpack from 'webpack';
 const root = path.join(process.cwd(), 'src');
 
 export default {
+  devtool: 'eval-source-map',
+
   entry: [
     'react-hot-loader/patch',
     'webpack-hot-middleware/client',

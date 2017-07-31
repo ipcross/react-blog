@@ -24,7 +24,7 @@ export default function(state = initialState, action) {
           posts: map(state.entries.posts, (post) => {
             if (post.id == action.postId) {
               return update(post, {
-                meta: {likes: {$ser: (post.meta.likes + 1)}}
+                meta: {likes: {$set: (post.meta.likes + 1)}}
               });
             }
             return post;

@@ -24,7 +24,10 @@ if (module.hot) {
       <AppContainer>
         <NextApp />
       </AppContainer>,
-      rootEl
+      rootEl,
+      () => {
+        delete window.__INITIAL_STATE__;
+      }
     );
   });
 }
