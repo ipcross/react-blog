@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Field, reduxForm, SubmissionError } from 'redux-form';
 import RenderField from 'components/elements/RenderField';
-import { get } from 'lodash/object';
 
 const EditPost = ({ handleSubmit, pristine, submitting, reset }) => (
   <div>
@@ -34,7 +33,7 @@ const submit = (values) => {
 export default connect(
   (state) => ({
     initialValues: {
-      title: get(state, 'post.entry.post.title', ''),
+      title: state.post.entry.post.title,
       createdAt: state.post.entry.post.meta.createdAt,
       author: state.post.entry.post.meta.author
     }
