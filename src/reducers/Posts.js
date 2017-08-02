@@ -1,5 +1,6 @@
 import { assign } from 'lodash/object';
 import { map } from 'lodash/collection';
+import update from 'immutability-helper';
 
 import * as types from 'constants/actionTypes/PostsActionTypes';
 
@@ -18,17 +19,18 @@ export default function(state = initialState, action) {
     case types.FETCH_POSTS_SUCCESS:
       return assign({}, initialState, { entries: action.response });
     case types.POSTS_LIKE:
-      return assign({}, state,
-        {
-          entries: map(state.entries, (post) => {
+      return assign({}, state, {
+        entries: assign({}, state.entries, {
+          posts: map(state.entries.posts, (post) => {
             if (post.id == action.postId) {
-              return assign({}, post, {
-                likes: post.likes + 1
+              return update(post, {
+                meta: {likes: {$ser: (post.meta.likes + 1)}}
               });
             }
             return post;
           })
-        });
+        })
+      });
     default:
       return state;
   }

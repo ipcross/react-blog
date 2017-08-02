@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Item, Divider } from 'semantic-ui-react';
 import BlogItem from 'components/ui/BlogItem';
 
 const BlogList = function ({ posts }) {
   return (
-    <ul>
-      {
-        posts.map(function(post) {
-          return (
-            <li key={post.id}>
-              <BlogItem  post={post} />
-            </li>
-          );
-        })
-      }
-    </ul>
+    <Item.Group>
+      {posts.map((post, index) => (
+        <div key={post.id}>
+          {index > 0 && <Divider />}
+          <BlogItem post={post} />
+        </div>
+      ))}
+    </Item.Group>
   );
 };
 

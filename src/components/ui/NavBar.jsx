@@ -6,7 +6,8 @@ const NavBar = function () {
   return (
     <Menu>
       <Menu.Item><Link to='/'>ReactBlog</Link></Menu.Item>
-      <Menu.Menu position='right'>
+      <Menu.Menu>
+        <Menu.Item><Link to='/contacts'>Contacts</Link></Menu.Item>
         <Menu.Item><Link to='/about'>About</Link></Menu.Item>
       </Menu.Menu>
     </Menu>

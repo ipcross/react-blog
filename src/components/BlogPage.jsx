@@ -4,7 +4,7 @@ import { Grid, Loader } from 'semantic-ui-react';
 
 import Helmet from 'react-helmet';
 
-import PieChart from 'components/ui/PieChart';
+import PieChartContainer from 'containers/PieChartContainer';
 import BlogList from 'components/ui/BlogList';
 
 const BlogPage = (props) => (
@@ -21,7 +21,7 @@ const BlogPage = (props) => (
           }
         </Grid.Column>
         <Grid.Column width={5}>
-          <PieChart columns={[...props.posts.map(post => [post.text,post.likes])]} />
+          <PieChartContainer posts={props.posts} />
         </Grid.Column>
       </Grid.Row>
     </Grid>

@@ -20,7 +20,7 @@ const Post = (props) => (
 Post.propTypes = {
   isFetching: PropTypes.bool,
   error: PropTypes.bool,
-  post: PropTypes.array
+  post: PropTypes.object
 };
 
 export default Post;

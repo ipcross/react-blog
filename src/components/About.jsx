@@ -8,7 +8,7 @@ About.defaultProps = {
 };
 
 About.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.string
 };
 
 export default About;
