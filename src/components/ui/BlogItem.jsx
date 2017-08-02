@@ -29,6 +29,10 @@ const BlogItem = (props) => (
   </Item>
 );
 
+BlogItem.defaultProps = {
+  post: {}
+};
+
 BlogItem.propTypes = {
   post: PropTypes.shape({
     id: PropTypes.number,
