@@ -32,9 +32,10 @@ const App = () => (
   </Provider>
 );
 
-/*ReactDOM.render(
-  <DevTools store={store} />,
-  document.getElementById('devtools')
-);*/
+/*if (__DEVELOPMENT__)
+  ReactDOM.render(
+    <DevTools store={store} />,
+    document.getElementById('devtools')
+  );*/
 
 export default App;
