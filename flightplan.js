@@ -12,12 +12,16 @@ plan.target('production', {
 });
 
 plan.local(function(local) {
+  local.log('Start tests');
+  local.exec('npm run test');
+  local.log('Stop tests');
   local.log('Copy files to remote hosts');
   var filesToCopy = local.exec('git ls-files', {silent: true});
   local.transfer(filesToCopy, '/tmp/' + tmpDir);
 });
 
 plan.remote(function(remote) {
+  remote.exec('nvm use default');
   remote.log('Move folder to web root');
   remote.exec('cp -R /tmp/' + tmpDir + ' ~/react-blog/');
   remote.rm('-rf /tmp/' + tmpDir);
