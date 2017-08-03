@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogItem render should render usual item 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <Item>
+    <Image
+        alt="Hello, World"
+        src="/images/World.jpg"
+        style={
+            Object {
+                "float": "left",
+                "height": 100,
+                "marginRight": 10,
+                "width": 150,
+              }
+        }
+    />
+    <ItemContent>
+        <ItemHeader
+            as="h2"
+        >
+            <Link
+                onlyActiveOnIndex={false}
+                style={Object {}}
+                to="/posts/5"
+            >
+                Hello, World!
+            </Link>
+        </ItemHeader>
+        <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/posts/5/edit"
+        >
+            Edit
+        </Link>
+        <ItemDescription>
+            <TextBox>
+                Default text for TextBox
+            </TextBox>
+        </ItemDescription>
+        <br />
+        <ItemMeta>
+            <PostDetails
+                author="Default Author"
+            />
+            <Connect(Likes)
+                postId={5}
+            />
+        </ItemMeta>
+    </ItemContent>
+</Item>,
+  "nodes": Array [
+    <Item>
+      <Image
+            alt="Hello, World"
+            src="/images/World.jpg"
+            style={
+                  Object {
+                        "float": "left",
+                        "height": 100,
+                        "marginRight": 10,
+                        "width": 150,
+                      }
+            }
+      />
+      <ItemContent>
+            <ItemHeader
+                  as="h2"
+            >
+                  <Link
+                        onlyActiveOnIndex={false}
+                        style={Object {}}
+                        to="/posts/5"
+                  >
+                        Hello, World!
+                  </Link>
+            </ItemHeader>
+            <Link
+                  onlyActiveOnIndex={false}
+                  style={Object {}}
+                  to="/posts/5/edit"
+            >
+                  Edit
+            </Link>
+            <ItemDescription>
+                  <TextBox>
+                        Default text for TextBox
+                  </TextBox>
+            </ItemDescription>
+            <br />
+            <ItemMeta>
+                  <PostDetails
+                        author="Default Author"
+                  />
+                  <Connect(Likes)
+                        postId={5}
+                  />
+            </ItemMeta>
+      </ItemContent>
+</Item>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <BlogItem
+        post={
+                Object {
+                        "id": 5,
+                        "image": Object {
+                          "alt": "Hello, World",
+                          "src": "/images/World.jpg",
+                        },
+                        "title": "Hello, World!",
+                      }
+        }
+/>,
+      "_debugID": 55,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "post": Object {
+            "id": 5,
+            "image": Object {
+              "alt": "Hello, World",
+              "src": "/images/World.jpg",
+            },
+            "title": "Hello, World!",
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 2,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <Item>
+          <Image
+                    alt="Hello, World"
+                    src="/images/World.jpg"
+                    style={
+                              Object {
+                                        "float": "left",
+                                        "height": 100,
+                                        "marginRight": 10,
+                                        "width": 150,
+                                      }
+                    }
+          />
+          <ItemContent>
+                    <ItemHeader
+                              as="h2"
+                    >
+                              <Link
+                                        onlyActiveOnIndex={false}
+                                        style={Object {}}
+                                        to="/posts/5"
+                              >
+                                        Hello, World!
+                              </Link>
+                    </ItemHeader>
+                    <Link
+                              onlyActiveOnIndex={false}
+                              style={Object {}}
+                              to="/posts/5/edit"
+                    >
+                              Edit
+                    </Link>
+                    <ItemDescription>
+                              <TextBox>
+                                        Default text for TextBox
+                              </TextBox>
+                    </ItemDescription>
+                    <br />
+                    <ItemMeta>
+                              <PostDetails
+                                        author="Default Author"
+                              />
+                              <Connect(Likes)
+                                        postId={5}
+                              />
+                    </ItemMeta>
+          </ItemContent>
+</Item>,
+        "_debugID": 56,
+        "_renderedOutput": <Item>
+          <Image
+                    alt="Hello, World"
+                    src="/images/World.jpg"
+                    style={
+                              Object {
+                                        "float": "left",
+                                        "height": 100,
+                                        "marginRight": 10,
+                                        "width": 150,
+                                      }
+                    }
+          />
+          <ItemContent>
+                    <ItemHeader
+                              as="h2"
+                    >
+                              <Link
+                                        onlyActiveOnIndex={false}
+                                        style={Object {}}
+                                        to="/posts/5"
+                              >
+                                        Hello, World!
+                              </Link>
+                    </ItemHeader>
+                    <Link
+                              onlyActiveOnIndex={false}
+                              style={Object {}}
+                              to="/posts/5/edit"
+                    >
+                              Edit
+                    </Link>
+                    <ItemDescription>
+                              <TextBox>
+                                        Default text for TextBox
+                              </TextBox>
+                    </ItemDescription>
+                    <br />
+                    <ItemMeta>
+                              <PostDetails
+                                        author="Default Author"
+                              />
+                              <Connect(Likes)
+                                        postId={5}
+                              />
+                    </ItemMeta>
+          </ItemContent>
+</Item>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <BlogItem
+    post={
+        Object {
+            "id": 5,
+            "image": Object {
+              "alt": "Hello, World",
+              "src": "/images/World.jpg",
+            },
+            "title": "Hello, World!",
+          }
+    }
+/>,
+}
+`;
