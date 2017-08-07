@@ -1,4 +1,7 @@
 {
+  "globals": {
+    "__DEVELOPMENT__": true
+  },
   "moduleFileExtensions": ["js", "jsx"],
   "setupFiles": ["<rootDir>/utils/before_test.js"],
   "modulePaths": [
