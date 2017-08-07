@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 import path from 'path';
 import webpack from 'webpack';
 
@@ -22,7 +21,7 @@ export default {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
@@ -38,10 +37,9 @@ export default {
   },
 
   resolve: {
-    modules: [
-      path.join(process.cwd(), 'src'),
-      'node_modules'
-    ]
+    extensions: [".js",".jsx"],
+    modules: [ 'node_modules',
+      root]
   },
 
   plugins: [
