@@ -1,0 +1,42 @@
+{
+  "pm2": {
+    "apps": [{
+      "cwd": "/var/www/app/current",
+      "name": "app",
+      "script": "./initializers/server/index.js",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "env_production": {
+        "PORT": 80,
+        "HOST": "127.0.0.1",
+        "NODE_ENV": "production"
+      },
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "error_file": "./logs/errors.log",
+      "out_file": "./logs/out.log",
+      "autorestart": true
+    }]
+  },
+  "shipit": {
+    "default": {
+      "workspace": ".tmp/",
+      "deployTo": "/var/www/app",
+      "repositoryUrl": "git@github.com:development/app.git",
+      "branch": "master",
+      "keepReleases": 5,
+      "shallowClone": true,
+      "ignores": [".git", "node_modules", ".babel-cache"],
+      "shared": {
+        "overwrite": true,
+        "dirs": [
+          "node_modules",
+          "logs"
+        ]
+      }
+    },
+    "production": {
+      "servers": "deploy@127.0.0.1"
+    }
+  }
+}
