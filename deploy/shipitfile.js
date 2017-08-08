@@ -7,6 +7,7 @@ module.exports = function (shipit) {
   require('shipit-deploy')(shipit);
   require('shipit-shared')(shipit);
   require('shipit-assets')(shipit);
+  require('shipit-nvm')(shipit);
 
   const localPath = path.resolve(__dirname, '../');
   const deployTo = config.shipit.default.deployTo;
@@ -89,7 +90,6 @@ module.exports = function (shipit) {
   shipit.task('dep', function () {
     shipit.log(chalk.blue.underline('Before deploy'));
     return npmInstallLocal()
-      .then(buildLocal)
       .then(function () {
         shipit.log(chalk.blue.underline('Start deploy'));
         // start deploy
@@ -102,7 +102,7 @@ module.exports = function (shipit) {
   shipit.on('deployed', function () {
     shipit.log(chalk.blue.underline('After deploy'));
     return npmInstallRemote()
-      .then(distRemoteCopy)
+      .then(buildRemote)
       .then(pm2StartOrRestart)
       .then(function () {
         shipit.log(chalk.green('Deploy successfully completed.'));
