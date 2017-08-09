@@ -31,7 +31,8 @@
         "overwrite": true,
         "dirs": [
           "node_modules",
-          "logs"
+          "logs",
+          "semantic/dist"
         ]
       }
     },

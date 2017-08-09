@@ -59,7 +59,7 @@ module.exports = function (shipit) {
 
   function pm2StartOrRestart() {
     shipit.log(chalk.cyan('Pm2 start|restart app'));
-    return shipit.remote('pm2 startOrRestart ' + deployToCurrent + '/deploy/ecosystem.config.js --only ' + appName + ' && sleep 2 && pm2 info ' + appName + ' && pm2 save')
+    return shipit.remote('pm2 startOrRestart ' + deployToCurrent + '/deploy/ecosystem.config.js --only ' + appName + ' --env production && sleep 2 && pm2 info ' + appName + ' && pm2 save')
       .then(function () {
         shipit.log(chalk.green('Pm2 app started.'));
       });
@@ -67,7 +67,7 @@ module.exports = function (shipit) {
 
   function pm2StartOrReload() {
     shipit.log(chalk.cyan('Pm2 start|reload app'));
-    return shipit.remote('pm2 startOrReload ' + deployToCurrent + '/deploy/ecosystem.config.js --only ' + appName + ' && sleep 2 && pm2 info ' + appName + ' && pm2 save')
+    return shipit.remote('pm2 startOrReload ' + deployToCurrent + '/deploy/ecosystem.config.js --only ' + appName + '  --env production && sleep 2 && pm2 info ' + appName + ' && pm2 save')
       .then(function () {
         shipit.log(chalk.green('Pm2 app started.'));
       });
