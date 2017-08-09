@@ -3,3 +3,5 @@ node_modules/
 dist/
 semantic/dist/
 src/static/assets/
+deploy/.tmp/
+deploy/config.json
